@@ -1,0 +1,29 @@
+{
+  "name": "zerolock-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "build:shared": "npm run build --workspace=shared",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "test": "npm run test --workspace=backend && npm run test --workspace=frontend"
+  },
+  "keywords": [
+    "zero-knowledge",
+    "cryptography",
+    "aes-256-gcm",
+    "argon2id",
+    "vtu-project"
+  ],
+  "author": "ZEROLOCK Security Team",
+  "license": "MIT"
+}
